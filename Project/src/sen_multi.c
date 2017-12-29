@@ -253,13 +253,13 @@ uint32_t co2_mvSum = 0;
 
 void AddAirData(uint16_t tvocData,uint16_t ch2oData,uint16_t co2Data)
 {
-    if( tvocData > TVOC_MAX) 
+    if( tvocData > TVOC_MAX*10) 
     {
-      tvocData = TVOC_MAX;
+      tvocData = TVOC_MAX*10;
     }
-    if( ch2oData > CH2O_MAX ) 
+    if( ch2oData > CH2O_MAX*10 ) 
     {
-      ch2oData = CH2O_MAX;
+      ch2oData = CH2O_MAX*10;
     }
     if( co2Data > CO2_MAX ) 
     {
